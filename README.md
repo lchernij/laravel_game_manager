@@ -1,62 +1,96 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Game Manager Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About
 
-## About Laravel
+This is a simple example of a API builded with Laravel 8 to manage my personal list of games.
+The project will include Steam API integration.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Enviroment settings
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- WSL2 (optional)
+- Ubuntu 20.04
+- Windows Terminal (optional)
+- php 7.4
+- Composer
+- Laravel 8
+- Github
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation
 
-## Learning Laravel
+### WSL2 (optional)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Follow the instructions in this [link](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Ubuntu 20.04
 
-## Laravel Sponsors
+Available in windows store
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+After install, run this follow commands to update and upgrade the O.S.
 
-### Premium Partners
+```php
+sudo apt update
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+sudo apt upgrade
+```
 
-## Contributing
+### Windows Terminal (optional)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Available in windows store, this is a nice program to management command line in windows.
 
-## Code of Conduct
+### Composer
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```php
+sudo apt install composer
+```
 
-## Security Vulnerabilities
+### PHP 7.4 dependencies
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- php7.4-xml
 
-## License
+to install, run this command:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```php
+sudo apt install php7.4-xml
+```
+
+### Options
+
+#### Creatre a new project
+
+```php
+composer create-project laravel/laravel _name_for_you_project_
+```
+
+#### Initialize github
+
+```php
+# if is you first time with git in the machine, you need add this to:
+
+#to generate a SSH Key to add in github
+ssh-keygen
+
+# You can use this command to get you ssh key
+cat /home/__user_name__/.ssh/id_rsa.pub
+## cat /home/lchernij/.ssh/id_rsa.pub
+
+# General info
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+Inside the project folder, run this commands to create and send the project to github
+
+```php
+git init .
+
+git add .
+
+git commit -m "First Commit"
+
+git remote add origin git@github.com:__your_project_repository__.git
+## git remote add origin git@github.com:lchernij/laravel_game_manager.git
+
+git branch -M main
+
+git push -u origin main
+```
