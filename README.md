@@ -47,11 +47,12 @@ sudo apt install composer
 
 - php7.4-xml
 - php7.4-sqlite3
+- php-xdebug (used to code coverage)
 
 to install, run this command:
 
 ```php
-sudo apt install php7.4-xml php7.4-sqlite3
+sudo apt install php7.4-xml php7.4-sqlite3 php-xdebug
 ```
 
 ### Options
