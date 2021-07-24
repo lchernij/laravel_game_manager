@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\PlatformController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('games/{id}/restore', [GameController::class, "restore"])->name('games.restore');
 Route::apiResource('games', GameController::class);
+
+Route::apiResource('platforms', PlatformController::class);
