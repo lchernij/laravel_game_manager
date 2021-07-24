@@ -46,11 +46,12 @@ sudo apt install composer
 ### PHP 7.4 dependencies
 
 - php7.4-xml
+- php7.4-sqlite3
 
 to install, run this command:
 
 ```php
-sudo apt install php7.4-xml
+sudo apt install php7.4-xml php7.4-sqlite3
 ```
 
 ### Options
